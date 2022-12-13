@@ -1,0 +1,13 @@
+tr:
+  spree:
+    available_parts: Uygun Ürünler
+    can_be_part: Bundle a eklenebilir
+    individual_sale: Tek başına satılabilir
+    no_variants: Seçeneksiz
+    parts: Bundle içeriği
+    assembly_cannot_be_part: assembly can't be part
+    product_bundles: Bundle Ürünler
+    parts_included: İçeriğindeki Ürünler
+    part_of_bundle: '%{sku} bundle a dahildir.'
+    selected_quantity_not_available: Seçilen adette stok bulunmuyor
+    user_selectable: Kullanıcı seçimli

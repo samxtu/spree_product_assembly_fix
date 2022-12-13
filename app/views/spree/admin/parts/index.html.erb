@@ -1,0 +1,28 @@
+<%- content_for :javascript do %>
+  <%= javascript_tag "backend/spree_product_assembly" %>
+<%- end %>
+
+<%= render :partial => 'spree/admin/shared/sub_menu/product' %>
+
+<%= render :partial => 'spree/admin/shared/product_tabs',
+  :locals => {:current => "Parts"} %>
+
+<div id="product_parts" data-product-slug="<%= product.slug %>">
+  <%= render :partial => "parts_table", :locals => {:parts => @parts} %>
+</div>
+
+<%= form_tag('#') do %>
+  <label><%= Spree.t(:search) %>:</label>
+  <div class="input-group">
+    <input id="searchtext" size="25" class="form-control">
+    <div class="input-group-append">
+      <button id="search_parts_button"
+        class="btn btn-primary"
+        name="button">
+        <i class="icon icon-search"></i> Search
+      </button>
+    </div>
+  </div>
+<% end %>
+
+<div id="search_hits"></div>
